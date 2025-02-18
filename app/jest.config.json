@@ -1,0 +1,5 @@
+{
+  "coverageProvider": "v8",
+  "verbose": true,
+  "transform": {}
+}
