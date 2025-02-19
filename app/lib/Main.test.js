@@ -2,11 +2,12 @@ import { jest } from '@jest/globals';
 import { run } from './main';
 
 jest.mock('./service', () => {
-    return jest.fn().mockImplementation(() => {
-        return {
+    return {
+        __esModule: true,
+        default: {
             getValue: jest.fn().mockReturnValue('mocked_value'),
-        };
-    });
+        },
+    };
 });
 
 describe('test run', () => {
